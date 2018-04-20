@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Недосоцсеть</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+   <header>
+       <h1>Dnoklassniki.com</h1>
+       <p>Мы знаем о тебе все</p>
+   </header>
+    
+    <form>
+        <input type="text" id='userName' autocomplete="off" pattern="^[А-Яа-яЁё]+$" required>
+        <div class="controls">
+            <button id='search'>Найти информацию</button>
+            <button id='help'>Помощь</button>
+        </div>
+        <div id="results" style="display: flex; flex-direction: column;"></div>
+    </form>
+    <footer>
+        <p class="copyright">Сделано Александром. С любовью. И парцелляцией. 2018</p>
+    </footer>
+    <!-- <script src="auto-delete.js"></script> -->
+     <script src="main.js"></script> 
+</body>
+</html>

@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:hover {
+  transition: 0.2s;
+}
+h1,
+button {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+header {
+  background: #4a76a8;
+  height: 60px;
+  border-bottom: 1px solid #4872a3;
+  text-align: center;
+  color: #fff;
+}
+form {
+  padding: 30px 0;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  width: 1000px;
+  height: 500px;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  margin: -250px 0 0 -500px;
+}
+form input {
+  outline: none;
+  border: 1px solid #4a76a8;
+  border-bottom: none;
+  height: 30px;
+  width: 80%;
+  padding-left: 10px;
+  font-size: 16px;
+}
+form .controls {
+  font-size: 0;
+  width: 80%;
+}
+form .controls button {
+  outline: none;
+  border: none;
+  height: 30px;
+  cursor: pointer;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+form .controls button:hover {
+  filter: brightness(90%);
+}
+form .controls #search {
+  width: 70%;
+  background: #4cba6f;
+}
+form .controls #help {
+  width: 30%;
+  background: #4a76a8;
+}
+form #results {
+  width: 80%;
+  margin: 50px auto;
+}
+form #results .messageBody {
+  min-height: 100px;
+  background: #4a76a8;
+  padding: 20px;
+  line-height: 25px;
+  color: #f2f2f2;
+  position: relative;
+}
+form #results .messageBody .img {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(50%, -50%);
+  width: 200px;
+  height: 200px;
+}
+form #results .messageBody .img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+form #results .messageBody a {
+  display: block;
+  margin-top: 20px;
+  width: 200px;
+  height: 30px;
+  color: #fff;
+  line-height: 30px;
+  text-align: center;
+  text-decoration: none;
+  background: #4cba6f;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+form #results .messageBody a:hover {
+  filter: brightness(90%);
+}
+footer {
+  background: #4a76a8;
+  height: 42px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  line-height: 42px;
+  color: #fff;
+}
