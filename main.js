@@ -21,7 +21,7 @@ let getJSON = function(url, successHandler, errorHandler) {
 };
 
 getJSON('usrs.json', function(data) {
-    document.querySelector('form').addEventListener('submit', function() {
+    document.getElementById('search').addEventListener('click', function() {
        let name = document.getElementById('userName').value;
        let usrName = data[0][name].name,
            usrCity = '<p>' + 'Живет в ' + data[0][name].city  + '</p>',
