@@ -21,7 +21,13 @@ let getJSON = function(url, successHandler, errorHandler) {
 };
 
 getJSON('usrs.json', function(data) {
-    document.getElementById('search').addEventListener('click', function() {
+    document.getElementById('search').addEventListener('click', findUser);
+    document.getElementById('search').addEventListener('touch', findUser);
+    document.getElementById('help').addEventListener('click', function() {
+        alert('Введите фамилию одноклассника в поле ввода, затем нажмите кнопку "Найти информацию". Теперь Вы можете узнать доступную информацию о данном человеке.')
+    });
+    
+    function findUser() {
        let name = document.getElementById('userName').value;
        let usrName = data[0][name].name,
            usrCity = '<p>' + 'Живет в ' + data[0][name].city  + '</p>',
@@ -43,10 +49,7 @@ getJSON('usrs.json', function(data) {
         result.innerHTML = messageText;
         result_container.appendChild(result);
         document.getElementById('userName').value = ''; //обнуляем поле поиска
-    });
-    document.getElementById('help').addEventListener('click', function() {
-        alert('Введите фамилию одноклассника в поле ввода, затем нажмите кнопку "Найти информацию". Теперь Вы можете узнать доступную информацию о данном человеке.')
-    });
+    };
 }
         
 , function(status) {
