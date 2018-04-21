@@ -15,15 +15,30 @@ button {
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
+  min-height: 600px;
 }
 header {
   background: #4a76a8;
   height: 60px;
+  width: 100%;
   border-bottom: 1px solid #4872a3;
   text-align: center;
   color: #fff;
 }
-form {
+main {
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+main form {
   padding: 30px 0;
   display: -webkit-flex;
   display: -moz-flex;
@@ -32,15 +47,13 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: absolute;
+  min-width: 320px;
   width: 1000px;
   height: 500px;
   z-index: 1;
-  top: 50%;
-  left: 50%;
-  margin: -250px 0 0 -500px;
+  margin: 0 auto;
 }
-form input {
+main form input {
   outline: none;
   border: 1px solid #4a76a8;
   border-bottom: none;
@@ -49,11 +62,11 @@ form input {
   padding-left: 10px;
   font-size: 16px;
 }
-form .controls {
+main form .controls {
   font-size: 0;
   width: 80%;
 }
-form .controls button {
+main form .controls button {
   outline: none;
   border: none;
   height: 30px;
@@ -62,22 +75,22 @@ form .controls button {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-form .controls button:hover {
+main form .controls button:hover {
   filter: brightness(90%);
 }
-form .controls #search {
+main form .controls #search {
   width: 70%;
   background: #4cba6f;
 }
-form .controls #help {
+main form .controls #help {
   width: 30%;
   background: #4a76a8;
 }
-form #results {
+main form #results {
   width: 80%;
   margin: 50px auto;
 }
-form #results .messageBody {
+main form #results .messageBody {
   min-height: 100px;
   background: #4a76a8;
   padding: 20px;
@@ -85,7 +98,7 @@ form #results .messageBody {
   color: #f2f2f2;
   position: relative;
 }
-form #results .messageBody .img {
+main form #results .messageBody .img {
   position: absolute;
   top: 50%;
   right: 0;
@@ -93,13 +106,13 @@ form #results .messageBody .img {
   width: 200px;
   height: 200px;
 }
-form #results .messageBody .img img {
+main form #results .messageBody .img img {
   display: block;
   width: 100%;
   height: 100%;
   border-radius: 50%;
 }
-form #results .messageBody a {
+main form #results .messageBody a {
   display: block;
   margin-top: 20px;
   width: 200px;
@@ -112,7 +125,7 @@ form #results .messageBody a {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-form #results .messageBody a:hover {
+main form #results .messageBody a:hover {
   filter: brightness(90%);
 }
 footer {
