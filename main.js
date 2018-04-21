@@ -20,7 +20,7 @@ let getJSON = function(url, successHandler, errorHandler) {
 	xhr.send();
 };
 
-getJSON('/usrs.json', function(data) {
+getJSON('usrs.json', function(data) {
     document.getElementById('search').addEventListener('click', function() {
        let name = document.getElementById('userName').value;
        let usrName = data[0][name].name,
