@@ -34,7 +34,6 @@ getJSON('usrs.json', function (data) {
     var messageText = '<p>' + usrName + ' ' + name + '</p>' + '<p>' + 'Возраст: ' + usrAge + '</p>' + usrCity + '<p>' + 'Любимый предмет: ' + usrObjectToLove + '</p>' + usrImg + usrVk,
         result_container = document.getElementById('results'),
         result = document.createElement('div');
-    result_container.innerHTML = ''; //обнуляем поле результата
     result.className = 'messageBody';
     result.innerHTML = messageText;
     result_container.appendChild(result);
