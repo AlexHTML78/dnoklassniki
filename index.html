@@ -1,33 +1,62 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Недосоцсеть</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/media.css">
-</head>
-<body>
-   <header>
-       <h1>Dnoklassniki.com</h1>
-       <p>Мы знаем о тебе все</p>
-   </header>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/media.css" />
+    <script src="https://vk.com/js/api/openapi.js?160"type="text/javascript"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Dnoklassniki.com</h1>
+      <p>Мы знаем о тебе все</p>
+    </header>
     <main>
-    <form>
-        <input type="text" id='userName' autocomplete="off" pattern="^[А-Яа-яЁё]+$" required>
+      <img src="" alt="" id="ava" />
+      <form>
+        <input
+          type="text"
+          id="userName"
+          autocomplete="off"
+          pattern="^[А-Яа-яЁё]+$"
+          required
+        />
         <div class="controls">
-            <button id='search'>Найти информацию</button>
-            <button id='help'>Помощь</button>
+          <button id="search">Найти информацию</button>
+          <button id="help">Помощь</button>
         </div>
         <div id="results" style="display: flex; flex-direction: column;"></div>
-    </form>
+      </form>
     </main>
     <footer>
-        <p class="copyright">Сделано Александром. С любовью. И парцелляцией. 2018</p>
+      <p class="copyright">
+        Сделано Александром. С любовью. И парцелляцией. 2018
+      </p>
     </footer>
-    <!-- <script src="auto-delete.js"></script> -->
-     <script src="main.js"></script> 
-</body>
+    <script type="text/javascript">
+      document.addEventListener("click", function() {
+        VK.init({
+          apiId: 6775586
+        });
+        VK.Auth.login(function(response) {
+          if (response.session) {
+            /* Пользователь успешно авторизовался */
+            if (response.settings) {
+              /* Выбранные настройки доступа пользователя, если они были запрошены */
+            }
+          } else {
+            /* Пользователь нажал кнопку Отмена в окне авторизации */
+          }
+        });
+      });
+    </script>
+    <!-- <script src="main.js"></script> -->
+  </body>
 </html>

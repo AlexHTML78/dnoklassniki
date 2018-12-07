@@ -1,26 +1,6 @@
 'use strict';
 
-var getJSON = function getJSON(url, successHandler, errorHandler) {
-  var xhr = typeof XMLHttpRequest != 'undefined' ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
-  xhr.open('get', url, true);
-  xhr.onreadystatechange = function () {
-    var status = void 0;
-    var data = void 0;
-    // https://xhr.spec.whatwg.org/#dom-xmlhttprequest-readystate
-    if (xhr.readyState == 4) {
-      // `DONE`
-      status = xhr.status;
-      if (status == 200) {
-        data = JSON.parse(xhr.responseText);
-        successHandler && successHandler(data);
-      } else {
-        errorHandler && errorHandler(status);
-      }
-    }
-  };
-  xhr.send();
-};
-
+/*
 getJSON('usrs.json', function (data) {
   document.getElementById('search').addEventListener('click', function () {
     var name = document.getElementById('userName').value;
@@ -31,6 +11,7 @@ getJSON('usrs.json', function (data) {
         usrVk = '<a target="_blank" href="' + data[0][name].vklink + '">' + 'Ссылка на ВК' + '</a>',
         usrObjectToLove = data[0][name].objectToLove;
     /* Результат */
+    /*
     var messageText = '<p>' + usrName + ' ' + name + '</p>' + '<p>' + 'Возраст: ' + usrAge + '</p>' + usrCity + '<p>' + 'Любимый предмет: ' + usrObjectToLove + '</p>' + usrImg + usrVk,
         result_container = document.getElementById('results'),
         result = document.createElement('div');
@@ -45,3 +26,5 @@ getJSON('usrs.json', function (data) {
 }, function (status) {
   alert('Сайт перестал работать.');
 });
+
+*/
